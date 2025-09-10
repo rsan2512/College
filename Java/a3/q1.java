@@ -1,21 +1,27 @@
 package Java.a3;
-
+// Q1. Write a program to search an element present in the array
 import java.util.Scanner;
-public class q1 {
+
+class q1{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter number of elements: ");
+        System.out.print("Enter the size of the array: ");
         int n = sc.nextInt();
-        int[] arr = new int[n];
-        System.out.println("Enter elements:");
-        for(int i=0; i<n; i++) arr[i] = sc.nextInt();
-        System.out.print("Enter element to search: ");
-        int x = sc.nextInt();
-        boolean found = false;
-        for(int i=0; i<n; i++) {
-            if(arr[i]==x) { found=true; break; }
+        int[] array = new int[n];
+        System.out.print("Enter the array elements: ");
+
+        for (int i = 0; i < n; i++) {
+            array[i] = sc.nextInt();
         }
-        if(found) System.out.println(x+" found in the array.");
-        else System.out.println(x+" not found in the array.");
+        System.out.print("Enter the element to search: ");
+        int key = sc.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            if (array[i] == key) {
+                System.out.println(key + " was found at index " + i);
+                return;
+            }
+        }
+        System.out.println(key + " was not found in the array");
     }
 }
