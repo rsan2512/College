@@ -1,4 +1,4 @@
-package btech.arithmetic;
+package Java.a6.q7.btech.arithmetic;
 
 public class MyMath {
 

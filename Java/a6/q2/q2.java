@@ -1,4 +1,4 @@
-
+package Java.a6.q2;
 interface Calculator {
     int add(int a, int b);
     int sub(int a, int b);

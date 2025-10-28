@@ -1,4 +1,4 @@
-
+package Java.a6.q7;
 
 import btech.arithmetic.MyMath;
 import java.util.*;

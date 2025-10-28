@@ -1,4 +1,4 @@
-
+package Java.a6.q5;
 interface Servicing {
     int getServiceTime();
 }

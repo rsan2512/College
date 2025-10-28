@@ -1,4 +1,4 @@
-
+package Java.a6.q1;
 abstract class Bank {
     abstract double getROI(); // abstract method
 }
