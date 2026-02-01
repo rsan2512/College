@@ -1,0 +1,46 @@
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width: 320px;
+    background: rgb(224, 221, 200);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+.avatar-wrapper {
+    padding-top: 40px;
+    background:rgb(194, 194, 228);
+}
+.avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 5px solid #4caf50;
+      overflow: hidden;
+      margin: 0 auto;
+      background: #ddd;
+    }
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.info {
+    padding: 60px 25px 30px;
+}
+h2 {
+    margin: 0 0 10px;
+    font-size: 1.6rem;
+    color: #222;
+}
+.bio {
+    margin: 0 0 24px;
+    color: #555;
+    line-height: 1.45;
+    font-size: 0.95rem;
+}

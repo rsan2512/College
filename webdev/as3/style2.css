@@ -1,0 +1,30 @@
+table,tr,td,th{
+	border:2px solid black;
+	margin: 60px;
+	border-collapse:collapse;
+}
+table{
+	width:60%;
+	height:40%;
+	font-size:20px;
+}
+h2{
+	margin-left:100px;
+	color:purple;
+    background:yellow;
+    
+}
+td{
+	height:40px;
+	width:60px;
+	text-align:center;
+}
+th{
+	background:black;
+	font-weight:bold;
+	color:White;
+    height:20px;
+}
+#a{
+	background:grey;
+}
