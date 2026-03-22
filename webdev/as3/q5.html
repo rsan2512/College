@@ -1,29 +1,115 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Simple Profile Card</title>
-  <link rel="stylesheet" href="style3.css">
+<title>Roshan Mishra - Portfolio</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+  body { background: #eef0f8; color: #333; }
+
+  header {
+    background: linear-gradient(135deg, #4a2a8a, #6c3fc5);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  header h1 { font-size: 2.4rem; letter-spacing: 3px; margin-bottom: 8px; }
+
+  nav { background: #1a1a2e; text-align: center; padding: 14px; }
+  nav a { color: #ccc; text-decoration: none; margin: 0 20px; font-size: 15px; }
+  nav a:hover { color: white; }
+
+  main { max-width: 780px; margin: 30px auto; padding: 0 20px; }
+
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+  }
+
+  .card h2 { font-size: 1.4rem; margin-bottom: 18px; border-bottom: 2px solid #eef0f8; padding-bottom: 10px; }
+  .card h3 { margin-bottom: 10px; }
+
+  .avatar { width: 110px; height: 110px; border-radius: 50%; border: 4px solid #6c3fc5; overflow: hidden; margin: 0 auto 20px; display: block; }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+  p { color: #555; line-height: 1.6; margin-bottom: 16px; }
+
+  .item { background: #eef0f8; padding: 10px 14px; border-radius: 8px; margin-bottom: 8px; font-size: 14px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  thead tr { background: #6c3fc5; color: white; }
+  th, td { padding: 12px; text-align: center; }
+  tbody tr:nth-child(even) { background: #f7f7fc; }
+  tbody td { color: #555; }
+
+  footer { background: #1a1a2e; color: #aaa; text-align: center; padding: 20px; font-size: 14px; }
+  footer p { color: #aaa; margin-bottom: 8px; }
+  footer a { color: #7ecbff; text-decoration: none; margin: 0 10px; }
+  footer a:hover { color: white; }
+</style>
 </head>
 <body>
 
-<div class="card">
+<header>
+  <h1>ROSHAN MISHRA</h1>
+  <p>Phone: +91 9XXXXXXXXX &nbsp;|&nbsp; Email: roshan@gmail.com</p>
+</header>
 
-  <div class="avatar-wrapper">
+<nav>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#hobbies">Hobbies</a>
+</nav>
+
+<main>
+
+  <section class="card" id="about">
+    <h2>About Me</h2>
     <div class="avatar">
-      <img src="img.jpg">
+      <img src="img.jpg" alt="Profile">
     </div>
-  </div>
+    <p>I am a second year student at Silicon University pursuing Computer Science and Engineering.
+    I am currently focusing on DSA in C++ and love building interactive websites. My life principle is <em>"Be Good, Do Good."</em></p>
+    <h3>Skills</h3>
+    <div class="item">HTML5</div>
+    <div class="item">CSS3</div>
+    <div class="item">Python</div>
+    <div class="item">Java</div>
+    <div class="item">DSA (C++)</div>
+  </section>
 
-  <div class="info">
-    <h2>Roshan Mishra</h2>
-    <p class="bio">
-      A passionate web developer who loves building interactive websites.
-    </p>
+  <section class="card" id="education">
+    <h2>Education</h2>
+    <table>
+      <thead>
+        <tr><th>Degree</th><th>Institution</th><th>Year</th><th>Result</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>10th Board</td><td>KV-2</td><td>2021</td><td>91%</td></tr>
+        <tr><td>12th Board</td><td>KV-2</td><td>2023</td><td>90%</td></tr>
+        <tr><td>B.Tech CSE</td><td>Silicon University</td><td>2024–2028</td><td>8.70 CGPA</td></tr>
+      </tbody>
+    </table>
+  </section>
 
-    Email📧:Roshan@gmail.com
-    Phone☎:+91-98765 43210
-   </div>
+  <section class="card" id="hobbies">
+    <h2>Hobbies</h2>
+    <div class="item">🎌 Watching Anime</div>
+    <div class="item">💻 Coding</div>
+    <div class="item">📚 Reading</div>
+  </section>
 
-</div>
+</main>
+
+<footer>
+  <p>Connect with me:</p>
+  <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+  <a href="https://github.com/" target="_blank">GitHub</a>
+</footer>
 
 </body>
 </html>

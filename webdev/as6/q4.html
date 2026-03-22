@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <input type="number" id="count" value="0">
+        <button onclick="change(+1)">+</button>
+        <button onclick="change(-1)">-</button>
+        <script>
+            function change(num){
+                const cnt=document.getElementById('count').value;
+                if(cnt<0) alert("Num cannot be below 0");
+                else{
+                    cnt=cnt+num;
+                }
+            }
+        </script>
+    </body>
+</html>

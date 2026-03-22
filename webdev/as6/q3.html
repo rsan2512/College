@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <style>
+            #colorbox{
+                width : 200px;
+                height : 200px;
+                border: 1px solid black;
+            }
+        </style>
+        <script>
+            function change(color){
+                const box=document.getElementById('colorbox');
+                const confirmed=confirm("Want to change background?");
+                if(confirmed) box.style.backgroundColor= color;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="colorbox"></div>
+        <button onclick="change('Red')">Red</button>
+        <button onclick="change('Green')">Green</button>
+        <button onclick="change('Blue')">Blue</button>
+    </body>
+</html>

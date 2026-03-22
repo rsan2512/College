@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <p id="para">Paragraph of text</p>
+        <button id="btn" onclick="toggle()">Hide</button>
+        <script>
+            function toggle(){
+                const para=document.getElementById('para');
+                const btn=document.getElementById('btn');
+                if(para.style.display==='none'){
+                    para.style.display='block';
+                    btn.innerHTML='Hide';
+                }else{
+                    para.style.display='none';
+                    btn.innerHTML='Show';
+                }
+            }
+        </script>
+    </body>
+</html>
