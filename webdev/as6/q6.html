@@ -1,0 +1,97 @@
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 24px;
+      width: 300px;
+    }
+    h2 {
+      text-align: center;
+    }
+    label {
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 5px;
+    }
+    select, input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: black;
+      color: white;
+    }
+    button:hover { background: #333; }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Currency Converter</h2>
+
+    <label>From:</label>
+    <select id="from">
+      <option>USD</option>
+      <option>EUR</option>
+      <option>GBP</option>
+      <option>INR</option>
+      <option>AUD</option>
+    </select>
+    <input type="number" id="amount" placeholder="Enter amount" />
+    <label>To:</label>
+    <select id="to">
+      <option>USD</option>
+      <option>EUR</option>
+      <option>GBP</option>
+      <option value="INR" selected>INR</option>
+      <option>AUD</option>
+    </select>
+    <input type="text" id="result" placeholder="Converted amount" readonly />
+    <button id="convertBtn">Convert</button>
+  </div>
+
+  <script>
+    const conversionRates = {
+      USD: { EUR: 0.93,   GBP: 0.82,   INR: 82.74,  AUD: 1.47  },
+      EUR: { USD: 1.08,   GBP: 0.88,   INR: 89.06,  AUD: 1.58  },
+      GBP: { USD: 1.22,   EUR: 1.14,   INR: 101.5,  AUD: 1.80  },
+      INR: { USD: 0.012,  EUR: 0.011,  GBP: 0.0098, AUD: 0.018 },
+      AUD: { USD: 0.68,   EUR: 0.63,   GBP: 0.55,   INR: 55.87 }
+    };
+    document.getElementById('convertBtn').addEventListener('click', function () {
+      const from   = document.getElementById('from').value;
+      const to     = document.getElementById('to').value;
+      const amount = document.getElementById('amount').value;
+      const error  = document.getElementById('error');
+      const result = document.getElementById('result');
+
+
+      if (amount === '') {
+        alert('Please enter an amount.');
+      }
+
+      if (from === to) {
+       alert('From and To currencies cannot be the same.');
+      }
+      const converted = parseFloat(amount) * conversionRates[from][to];
+      result.value = converted.toFixed(2);
+    });
+  </script>
+
+</body>
+</html>

@@ -5,10 +5,11 @@
         <button onclick="change(-1)">-</button>
         <script>
             function change(num){
-                const cnt=document.getElementById('count').value;
+                let cnt=parseInt(document.getElementById('count').value);
+                cnt=cnt+num;
                 if(cnt<0) alert("Num cannot be below 0");
                 else{
-                    cnt=cnt+num;
+                    document.getElementById("count").value=cnt;
                 }
             }
         </script>

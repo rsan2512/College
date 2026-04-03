@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <input type="number" id="num" placeholder="Enter a Number">
+        <button id="check">Check</button>
+        <script>
+            function isPrime(n){
+                if (n < 2) return false;
+                for (let i = 2; i <= Math.sqrt(n); i++) {
+                    if (n % i === 0) return false;
+                }return true;
+            }
+            const chk=document.getElementById('check');
+            chk.addEventListener('click',()=>{
+                let num=parseInt(document.getElementById('num').value);
+                if(isPrime(num)){
+                    alert(num+" is a Prime Number");
+                }else{
+                    alert(num+" is a composite number");
+                }
+            })
+        </script>
+    </body>
+</html>
